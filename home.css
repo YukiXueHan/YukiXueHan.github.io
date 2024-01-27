@@ -1,0 +1,129 @@
+@font-face {
+    font-family: Centra;
+    src: url('assets/font/CentraNo2-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: Centra;
+    src: url('assets/font/CentraNo2-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: Centra;
+    src: url('assets/font/CentraNo2-Book.ttf');
+    font-weight: 400;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Centra', sans-serif !important;
+}
+.backGroundIMG {
+    box-sizing: border-box;
+    overflow: auto;
+    margin: 0;
+    /* padding: 4em; */
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    height: 100vh;
+    background-image: url('assets/img/header-img.svg'), url('assets/img/banner-bg.png');
+    background-position: right 10% bottom 25%, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 30%, cover;
+    background-attachment: fixed, fixed;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
+    /* padding: 5%; */
+    padding-top: 3%;
+    padding-left: 5%;
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+    
+}
+  
+.navbarText {
+    color: #CCCCCC;
+    /* padding-top: 14px; */
+    padding-right: 30px;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #31244b;
+    background-color: #31244b;
+    border-radius: 10px;
+}
+  
+.navbarText:hover {
+    color: white;
+}
+
+.selfInfo {
+    position: relative;
+    top: 30%;
+}
+h1 {
+    max-width: 60%;
+    font-size: 6vw;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+p {
+    margin-top: 0;
+    max-width: 60%;
+    color: #CCCCCC;
+    font-size: 1.5vw;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    grid-gap: 5px;
+    grid-column-gap: 5px;
+    grid-template-areas: 
+        "leftsidebar main"
+        "leftsidebar main"
+        "leftsidebar main";
+    
+    grid-template-rows:25% 25% ;
+    grid-template-columns: 30% 30%;
+}
+
+.leftSideClass {
+    grid-area: leftsidebar;
+    background-color: #FFCCCC;
+    border: 1px solid #CCFF99;
+}
+.mainClass {
+    grid-area: main;
+    background-color: #FFCCCC;
+    border: 1px solid #CCFF99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
