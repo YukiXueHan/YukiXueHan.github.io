@@ -1,16 +1,16 @@
 @font-face {
     font-family: Centra;
-    src: url('assets/font/CentraNo2-Bold.ttf');
+    src: url('../assets/font/CentraNo2-Bold.ttf');
     font-weight: 700;
 }
 @font-face {
     font-family: Centra;
-    src: url('assets/font/CentraNo2-Medium.ttf');
+    src: url('../assets/font/CentraNo2-Medium.ttf');
     font-weight: 500;
 }
 @font-face {
     font-family: Centra;
-    src: url('assets/font/CentraNo2-Book.ttf');
+    src: url('../assets/font/CentraNo2-Book.ttf');
     font-weight: 400;
 }
 body {
@@ -28,13 +28,12 @@ body {
     padding-right: 5%;
     width: 100%;
     height: 100vh;
-    background-image: url('assets/img/header-img.svg'), url('assets/img/banner-bg.png');
+    background-image: url('../assets/img/header-img.svg'), url('../assets/img/banner-bg.png');
     background-position: right 10% bottom 25%, center;
     background-repeat: no-repeat, no-repeat;
     background-size: 30%, cover;
     background-attachment: fixed, fixed;
 }
-
 .navbar {
     box-sizing: border-box;
     top: 0;
@@ -66,10 +65,9 @@ body {
     height: 40px;
     transform: scale(0.8);
 }
-  
+
 .navbarText {
     color: #CCCCCC;
-    /* padding-top: 14px; */
     padding-left: 15px;
     padding-right: 15px;
     font-size: 25px;
@@ -80,7 +78,10 @@ body {
     border-radius: 10px;
     transition: all 0.5s ease;
 }
-  
+.navbarText.active {
+    background-color: #5f55af;
+    color: white;
+}
 .navbarText:hover {
     color: white;
     font-size: 30px;
@@ -99,11 +100,22 @@ body {
     position: relative;
     top: 30%;
 }
-h1 {
+.selfInfo h2 {
+    color: white;
+    width: fit-content;
+    max-width: 60%;
+    font-size: 1.5vw;
+    padding: 1%;
+    background: linear-gradient(to right,purple, #581490);
+    border: 1px solid white;
+}
+
+.selfInfo h1 {
     max-width: 60%;
     font-size: 6vw;
     font-weight: 700;
     color: white;
+    margin-top: 10px;
     margin-bottom: 0;
     animation-duration: 3s;
     animation-name: slidein;
@@ -119,13 +131,13 @@ h1 {
         width: 100%;
     }
 }
-p {
+.selfInfo p {
     margin-top: 0;
     max-width: 60%;
     color: #CCCCCC;
-    font-size: 20px;
-    /* font-size: 1.5vw; */
-    margin-bottom: 10%;
+    /* font-size: 20px; */
+    font-size: 1.5vw;
+    margin-bottom: 5%;
 }
 
 .btn-container {
@@ -136,7 +148,7 @@ button {
     border: 0;
     border-radius: 50px;
     color: white;
-    font-size: 20px;
+    font-size: 1.5vw;
     font-family: 'Centra', sans-serif !important;
     /* background: #5f55af; */
     padding: 15px;
@@ -162,34 +174,43 @@ button:hover {
         "header header"
         "text text"
         "leftside1 rightside1"
-        "leftside rightside"
-        "leftside rightside";
+        "leftside2 leftside2"
+        "leftside3 rightside3";
     
-    grid-template-rows:25%;
+    grid-template-rows:20%;
     grid-template-columns: 50%;
 }
 
-.leftSideClass {
+.leftSideAboutMe {
     grid-area: leftside1;
     background-color: transparent;
     /* border: 1px solid #CCFF99; */
 }
-.rightSideClass {
+.rightSideExperience {
     grid-area: rightside1;
     background-color: transparent;
     /* border: 1px solid #CCFF99; */
 }
+.leftSideContactMe {
+    grid-area: leftside2;
+    background-color: transparent;
+}
 
-h2{
-    margin-left: 5%;
+.grid-container h2{
+    /* margin-left: 5%; */
     text-align: left;
     width: 100%;
     color: white;
     /* margin-bottom: 0; */
 }
 
-span, li {
-    font-size: 20px;
+span, li{
+    list-style: "\1F496";
+    font-size: 1.5vw;
     width: 100%;
     color: #CCCCCC;
+}
+
+ul {
+    padding-left: 5%;
 }
