@@ -155,7 +155,7 @@ button {
     background: linear-gradient(to right, #f72585 50%, #5f55af 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition:all 2s ease;
+    transition:all 1s ease;
 }
 button:hover {
     background-position: left bottom;
@@ -168,32 +168,39 @@ button:hover {
     margin: 0;
     padding: 0;
     background-color: transparent;
-    grid-gap: 30%;
+    grid-gap: 10%;
     grid-column-gap: 20px;
     grid-template-areas: 
         "header header"
         "text text"
         "leftside1 rightside1"
-        "leftside2 leftside2"
-        "leftside3 rightside3";
+        "leftside2 rightside2";
     
-    grid-template-rows:20%;
+    grid-template-rows:30%;
     grid-template-columns: 50%;
 }
 
-.leftSideAboutMe {
+.leftSide1 {
     grid-area: leftside1;
     background-color: transparent;
+    margin-top: 30%;
     /* border: 1px solid #CCFF99; */
 }
-.rightSideExperience {
+.rightSide1 {
     grid-area: rightside1;
     background-color: transparent;
+    margin-top: 30%;
     /* border: 1px solid #CCFF99; */
 }
-.leftSideContactMe {
+.leftSide2 {
     grid-area: leftside2;
     background-color: transparent;
+    padding-bottom: 30%;
+}
+.rightSide2 {
+    grid-area: rightside2;
+    background-color: transparent;
+    padding-bottom: 30%;
 }
 
 .grid-container h2{
