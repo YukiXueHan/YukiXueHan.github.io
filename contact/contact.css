@@ -39,7 +39,6 @@ body {
     box-sizing: border-box;
     top: 0;
     left: 0;
-    /* padding: 5%; */
     padding-top: 3%;
     padding-left: 5%;
     padding-right: 10%;
@@ -97,7 +96,6 @@ body {
 .social-icon img::after {
     content: attr(title);
 }
-
 .grid-container {
     display: grid;
     width: 100%;
@@ -109,12 +107,10 @@ body {
     grid-column-gap: 1%;
     grid-template-areas: 
         "header header header"
-        "tag1 tag2 tag3"
-        "project1 project2 project3"
-        "project1 project2 project3";
+        "body body body";
     
-    grid-template-rows:0.5fr 0.5fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:0.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .headerClass {
@@ -134,54 +130,27 @@ h2 {
 p {
     color: #CCCCCC;
 }
-.tag1 {
-    grid-area: tag1;
-    background-color: transparent;
-    
+.bodyClass {
+    color: #CCCCCC;
+    grid-area: body;
+    /* text-align: center; */
 }
-.tag2 {
-    grid-area: tag2;
-    background-color: transparent;
+
+table {
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
-.tag3 {
-    grid-area: tag3;
-    background-color: transparent;
+.tableText {
+    font-size: 20px;
+    /* font-style: italic;
+    color: #0066CC; */
 }
-.project1Class {
-    grid-area: project1;
-    background-color: transparent;
-    background-image: url('../assets/img/project-img1.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 5%;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-.project2Class {
-    grid-area: project2;
-    background-color: transparent;
-    background-image: url('../assets/img/project-img2.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 5%;
-}
-.project3Class {
-    grid-area: project3;
-    background-color: transparent;
-    background-image: url('../assets/img/project-img3.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 5%;
-}
-.project1Class:hover {
-    opacity: 0.5;
-}
-.project2Class:hover {
-    opacity: 0.5;
-}
-.project3Class:hover {
-    opacity: 0.5;
+
+.tableHead {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
 }

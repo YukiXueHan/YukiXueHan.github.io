@@ -69,7 +69,6 @@ body {
   
 .navbarText {
     color: #CCCCCC;
-    /* padding-top: 14px; */
     padding-left: 15px;
     padding-right: 15px;
     font-size: 25px;
@@ -110,13 +109,12 @@ body {
     grid-template-areas: 
         "header header header"
         "tag1 tag2 tag3"
-        "project1 project2 project3"
-        "project1 project2 project3";
+        "skill1 skill2 skill3"
+        "skill1 skill2 skill3";
     
-    grid-template-rows:0.5fr 0.5fr 1fr;
+    grid-template-rows:0.5fr 0.1fr 0.5fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
 .headerClass {
     grid-area: header;
     color: white;
@@ -130,6 +128,8 @@ body {
 }
 h2 {
     color: white;
+    margin-bottom: 0;
+    text-align: center;
 }
 p {
     color: #CCCCCC;
@@ -147,41 +147,41 @@ p {
     grid-area: tag3;
     background-color: transparent;
 }
-.project1Class {
-    grid-area: project1;
+.skill1Class {
+    grid-area: skill1;
     background-color: transparent;
-    background-image: url('../assets/img/project-img1.png');
+    background-image: url('../assets/img/meter1.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 70%;
     border-radius: 5%;
     opacity: 1;
     transition: opacity 0.3s ease;
 }
-.project2Class {
-    grid-area: project2;
+.skill2Class {
+    grid-area: skill2;
     background-color: transparent;
-    background-image: url('../assets/img/project-img2.png');
+    background-image: url('../assets/img/meter2.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 70%;
     border-radius: 5%;
 }
-.project3Class {
-    grid-area: project3;
+.skill3Class {
+    grid-area: skill3;
     background-color: transparent;
-    background-image: url('../assets/img/project-img3.png');
+    background-image: url('../assets/img/meter3.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 70%;
     border-radius: 5%;
 }
-.project1Class:hover {
+.skill1Class:hover {
     opacity: 0.5;
 }
-.project2Class:hover {
+.skill2Class:hover {
     opacity: 0.5;
 }
-.project3Class:hover {
+.skill3Class:hover {
     opacity: 0.5;
 }
