@@ -94,6 +94,12 @@ body {
 .social-icon img::after {
     content: attr(title);
 }
+.logo {
+    width: 12%;
+    float: right;
+    padding: 5px;
+    border: 1px solid white;
+  }
 
 .selfInfo {
     position: relative;
