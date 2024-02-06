@@ -125,6 +125,11 @@ body {
     animation-duration: 3s;
     animation-name: slidein;
 }
+@media screen and (max-width: 768px) {
+    .selfInfo h1 {
+        color: #FFFF99;
+    }
+}
 @keyframes slidein {
     from {
         margin-left: 100%;
